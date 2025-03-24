@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: rgb(6, 6, 32);
+}
+h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    text-transform: uppercase;    
+    color: teal;
+    letter-spacing: 0.1em;
+}
+#calc-head{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: teal;
+    -webkit-text-fill-color: rgb(6, 6, 32);
+    
+}
+.cal-form{
+    max-width: fit-content;
+    margin: 80px auto;
+}
+p{
+    color: azure;
+    letter-spacing: 0.2em;
+    padding: 5px 0px;
+}
+#width,#height{
+    padding: 5px 150px 5px 5px;
+    border: 1px solid teal;
+}
+#type{
+    padding: 5px 100px 5px 5px;
+}
+#button{
+    padding: 5px 25px;
+    margin-top: 15px;
+    background-color: teal;
+    color: white;
+    letter-spacing: 0.1em;
+    border: 0;
+    cursor: pointer;
+}
+#button:active{
+    background-color: white;
+    color: teal;
+}
+h3{
+    margin-top: 10px;
+    color: teal;
+    letter-spacing: 0.1em;
+}
+span{
+    color: white;
+}
