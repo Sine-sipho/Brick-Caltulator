@@ -1,13 +1,12 @@
 let wallWidth = document.getElementById("width");
 let wallHeight = document.getElementById("height");
-
+let doorSize = document.getElementById("door-size").value
 
 //declaring drop-down menu variables
 let mblock = document.getElementById("block");
 let stockBrick = document.getElementById("stock");
 //convert input values into integers
-
-function calculateArea(type){
+function calculateArea(type, doorSize){
    let blockWidth = 0.390;
    let blockHeight = 0.190;
    let brickWidth = 0.222;
@@ -21,10 +20,12 @@ function calculateArea(type){
    else if (type === "stock-brick"){
    return Math.round((widthValue / brickWidth * heightValue / brickheight))
    }
-   else{
+   else if(doorSize > 0){
+      widthValue + heightValue - doorValue
+   }
       return "Enter a valid input."
    }
-}
+
 //add eventListener for when option of the drop-down menu changes
 let selected = document.getElementById("type");
 //caltulate
