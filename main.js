@@ -1,41 +1,29 @@
-let wallWidth = document.getElementById("width");
-let wallHeight = document.getElementById("height");
-let doorSize = document.getElementById("door-size").value
+document.getElementById("button").addEventListener("click", function () {
+  let wallWidthvalue = parseFloat(document.querySelector("#width").value);
+  let wallengthvalue = parseFloat(document.querySelector("#height").value);
+  let doorValue = parseFloat(document.querySelector("#door").value);
+  let windowValue = parseFloat(document.querySelector("#window").value);
 
-//declaring drop-down menu variables
-let mblock = document.getElementById("block");
-let stockBrick = document.getElementById("stock");
-//convert input values into integers
-function calculateArea(type, doorSize){
-   let blockWidth = 0.390;
-   let blockHeight = 0.190;
-   let brickWidth = 0.222;
-   let brickheight = 0.106;
-   let widthValue = parseFloat(wallWidth.value);
-   let heightValue = parseFloat(wallHeight.value);
+  let wallArea = wallWidthvalue * wallengthvalue;
+  let openings = doorValue + windowValue;
+  let netWallarea = wallArea - openings;
 
-   if (type === "M6 block"){
-   return Math.round((widthValue / blockWidth * heightValue / blockHeight))
-   }
-   else if (type === "stock-brick"){
-   return Math.round((widthValue / brickWidth * heightValue / brickheight))
-   }
-   else if(doorSize > 0){
-      widthValue + heightValue - doorValue
-   }
-      return "Enter a valid input."
-   }
-
-//add eventListener for when option of the drop-down menu changes
-let selected = document.getElementById("type");
-//caltulate
-selected.addEventListener("change", function(){
-   let val = document.getElementById("type").value;
-   let btn = document.getElementById("button");
-   btn.addEventListener("click", function(){
+  function caltulateBricks(brick_type) {
+    if (brick_type === "M6 block") {
       let total = document.getElementById("total");
-      total.innerHTML = calculateArea(val)
-   })
-})
-//create function 
- 
+      total.innerHTML = netWallarea / 0.0741;
+    } else {
+      total.innerHTML = netWallarea / 0.0328;
+    }
+  }
+  caltulateBricks(document.querySelector("#type").value);
+});
+//console.log(netWallarea);
+//   console.log(wallWidthvalue, wallengthvalue, doorValue, windowValue);
+//   console.log(wallArea);
+//   console.log(openings);
+
+// let blockWidth = 0.39;
+// let blockHeight = 0.19;
+// let brickWidth = 0.222;
+// let brickheight = 0.106;

@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=PT+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">"
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=PT+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    "
+    <link href="style.css" rel="stylesheet" />
     <title>Tip calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1 class="heading">Area <span id="calc-head">Caltulator</span></h1>
-        <div class="cal-form">
+      <h1 class="heading">Area <span id="calc-head">Caltulator</span></h1>
+      <div class="cal-form">
         <p>Enter width of wall in metres:</p>
-        <input type="number" class="width-input" name="wallWidth" id="width"><br>
+        <input
+          type="number"
+          class="width-input"
+          name="wallWidth"
+          id="width"
+        /><br />
         <p>Enter height of wall in metres:</p>
-        <input type="number" class="height-input" name="wallHeight" id="height"><br>
+        <input
+          type="number"
+          class="height-input"
+          name="wallHeight"
+          id="height"
+        /><br />
         <p>Enter door size in m<sup>2</sup></p>
-        <input type="text" class="door-input" name="doorSize" id="door_size">
+        <input type="number" class="door-input" name="doorSize" id="door" />
+        <p>Enter window size in m<sup>2</sup></p>
+        <input
+          type="number"
+          class="window-input"
+          name="windowSize"
+          id="window"
+        />
         <p>Type of block:</p>
         <select name="brick-type" id="type">
-            <option value=""></option>
-            <option value="M6 block" id="block">M6 block</option>
-            <option value="stock-brick" id="stock">Stock brick</option>
-        </select><br>
+          <option value=""></option>
+          <option value="M6 block" id="block">M6 block</option>
+          <option value="stock-brick" id="stock">Stock brick</option></select
+        ><br />
         <button id="button">caltulate</button>
         <h3>Total: <span id="total"></span></h3>
+      </div>
     </div>
-    </div>
-   <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
